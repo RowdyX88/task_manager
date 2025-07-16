@@ -7,5 +7,15 @@
     "status": "pending",
     "created_at": "2025-07-16T00:17:25.340594",
     "completed_at": null
+  },
+  {
+    "id": 2,
+    "title": "running",
+    "description": "just around the hood",
+    "priority": "medium",
+    "category": "personal",
+    "status": "pending",
+    "created_at": "2025-07-16T18:04:00.661080",
+    "completed_at": null
   }
 ]

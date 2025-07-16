@@ -42,11 +42,14 @@ class TaskManager:
         if priority not in ['high', 'medium', 'low']:
             priority = 'medium'
         
+        category = input("Enter task category (e.g., Work, Personal, Urgent): ").strip()
+
         task = {
             'id': len(self.tasks) + 1,
             'title': title,
             'description': description,
             'priority': priority,
+            'category': category,
             'status': 'pending',
             'created_at': datetime.now().isoformat(),
             'completed_at': None
@@ -65,7 +68,7 @@ class TaskManager:
         print("\n=== TASKS ===")
         for task in self.tasks:
             status_icon = "✓" if task['status'] == 'completed' else "□"
-            print(f"{task['id']}. [{status_icon}] {task['title']} ({task['priority']})")
+            print(f"{task['id']}. [{status_icon}] {task['title']} ({task['priority']}, {task.get('category', 'No Category')})")
             if task['description']:
                 print(f"   Description: {task['description']}")
         
